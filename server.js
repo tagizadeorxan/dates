@@ -40,4 +40,8 @@ app.get('/data',(req,res)=>{
       
 })  
 });  
+
+app.get('/',()=>{
+    res.send('no response')
+})
   
