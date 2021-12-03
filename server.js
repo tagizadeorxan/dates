@@ -1,10 +1,12 @@
 const mysql = require('mysql');  
 const express = require('express');  
-var app = express();  
+var app = express();
+var cors = require('cors')  
 const bodyparser = require('body-parser');  
   
 // Used for sending the Json Data to Node API  
-app.use(bodyparser.json());  
+app.use(bodyparser.json());
+app.use(cors())  
   
 // Connection String to Database  
 var mysqlConnection = mysql.createConnection({  
