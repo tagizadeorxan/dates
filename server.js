@@ -26,7 +26,7 @@ mysqlConnection.connect((err) => {
 });  
   
 // To Run the server with Port Number  
-app.listen(3000,()=> console.log("Express server is running at port no : 3000"));  
+app.listen(process.env.PORT || 3000,()=> console.log("Express server is running at port no : 3000"));  
   
 // CRUD Methods  
 //Get all Employees  
@@ -41,7 +41,6 @@ app.get('/data',(req,res)=>{
 });  
 
 app.get('/',(req,res)=>{
-    console.log("oklay")
     res.send('no response')
 })
   
