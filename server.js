@@ -31,7 +31,6 @@ app.listen(3000,()=> console.log("Express server is running at port no : 3000"))
 // CRUD Methods  
 //Get all Employees  
 app.get('/data',(req,res)=>{  
-    console.log("run")
     mysqlConnection.query('SELECT * FROM Data',(err,rows,fields)=>{  
     if(!err)   
     res.send(rows);  
@@ -41,7 +40,8 @@ app.get('/data',(req,res)=>{
 })  
 });  
 
-app.get('/',()=>{
+app.get('/',(req,res)=>{
+    console.log("oklay")
     res.send('no response')
 })
   
